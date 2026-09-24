@@ -105,7 +105,7 @@ MotionDeblurring/
 
 ---
 
-## 🧪 The Methods
+## The Methods
 
 ### Inverse Filter
 
@@ -133,7 +133,7 @@ Adds a smoothness prior `P` (Laplacian) to prevent noise amplification. Best qua
 
 ---
 
-## 🔬 Experiments
+## Experiments
 
 | # | Name | Question it Answers | Figure |
 | :-: | :--- | :--- | :--- |
@@ -201,7 +201,7 @@ Adds a smoothness prior `P` (Laplacian) to prevent noise amplification. Best qua
 
 ---
 
-## 💡 Key Findings
+## Key Findings
 
 1. **Regularized filtering wins** under ideal conditions (31.78 dB, SSIM 0.903).
 2. **Wiener collapses** under even minimal noise (σ = 0.001 → 9.6 dB drop).
@@ -212,7 +212,7 @@ Adds a smoothness prior `P` (Laplacian) to prevent noise amplification. Best qua
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 | Requirement | Version | Notes |
 | :--- | :--- | :--- |
@@ -254,7 +254,3 @@ exp3_blur_length
 ```
 
 ---
-
-<div align="center">
-  <sub>Built with MATLAB · Restored with care</sub>
-</div>

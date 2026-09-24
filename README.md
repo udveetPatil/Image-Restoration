@@ -142,7 +142,7 @@ Adds a smoothness prior `P` (Laplacian) to prevent noise amplification. Best qua
 | 3 | Blur Length Variation | Does performance degrade with severe blur? | [📈](results/figures/exp3_blur_length.png) |
 | 4 | Wrong PSF Sensitivity | What if the PSF isn't known exactly? | [📈](results/figures/exp4_wrong_psf.png) |
 | 5 | Lucy-Richardson Convergence | When should you stop iterating? | [📈](results/figures/exp5_convergence.png) |
-| 6 | Custom vs. Built-in | Did we implement the math correctly? | — |
+| 6 | Custom vs. Built-in | Did we implement the math correctly? | *(table only)* |
 
 ### Experiment 2 — Noise Robustness
 

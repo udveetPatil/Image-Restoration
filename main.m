@@ -11,9 +11,6 @@ addpath('ai');
 if ~exist('results/figures', 'dir'); mkdir('results/figures'); end
 if ~exist('results/metrics', 'dir'); mkdir('results/metrics'); end
 
-% ---- Shared figures ----
-fig_manager('plots_fig');
-fig_manager('grids_fig');
 
 % ---- Ask user for image (or use default) ----
 fprintf('\n========================================\n');
@@ -44,6 +41,10 @@ end
 
 % ---- Store the choice so experiments can find it ----
 setappdata(0, 'DIP_image_path', img_path);
+
+% ---- Shared figures ----
+fig_manager('plots_fig');
+fig_manager('grids_fig');
 
 
 % ---- Run experiments ----

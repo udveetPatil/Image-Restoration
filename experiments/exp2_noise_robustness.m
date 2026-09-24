@@ -1,5 +1,10 @@
 function exp2_noise_robustness()
-    original = im2double(imread('cameraman.tif'));
+
+    original = load_image(getappdata(0, 'DIP_image_path'));
+    if min(size(original)) < 128
+        fprintf('  [warning] Image is smaller than 128x128; some blurs may exceed image bounds.\n');
+    end
+    
     len = 30; theta = 45;
     noise_levels = [0, 0.001, 0.01, 0.05];
     method_labels = {'Blurred', 'Inverse', 'Wiener', 'Lucy', 'Regularized'};

@@ -1,7 +1,10 @@
 function exp6_custom_vs_builtin()
     % Experiment 6: Custom vs Built-in comparison
     
-    original = im2double(imread('cameraman.tif'));
+    original = load_image(getappdata(0, 'DIP_image_path'));
+    if min(size(original)) < 128
+        fprintf('  [warning] Image is smaller than 128x128; some blurs may exceed image bounds.\n');
+    end
     len = 30; theta = 45;
     [blurred, PSF] = generate_blur(original, len, theta);
     

@@ -1,5 +1,10 @@
 function exp3_blur_length()
-    original = im2double(imread('cameraman.tif'));
+    
+    original = load_image(getappdata(0, 'DIP_image_path'));
+    if min(size(original)) < 128
+        fprintf('  [warning] Image is smaller than 128x128; some blurs may exceed image bounds.\n');
+    end
+    
     blur_lengths = [10, 20, 30, 40, 50];
     theta = 45;
     method_labels = {'Blurred', 'Inverse', 'Wiener', 'Lucy', 'Regularized'};

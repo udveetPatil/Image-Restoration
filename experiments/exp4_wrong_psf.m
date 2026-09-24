@@ -1,5 +1,10 @@
 function exp4_wrong_psf()
-    original = im2double(imread('cameraman.tif'));
+
+    original = load_image(getappdata(0, 'DIP_image_path'));
+    if min(size(original)) < 128
+        fprintf('  [warning] Image is smaller than 128x128; some blurs may exceed image bounds.\n');
+    end
+    
     true_len = 30; true_theta = 45;
     [blurred, ~] = generate_blur(original, true_len, true_theta);
     len_values = [25, 30, 35];

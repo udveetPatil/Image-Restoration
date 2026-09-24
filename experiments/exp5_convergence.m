@@ -1,5 +1,10 @@
 function exp5_convergence()
-    original = im2double(imread('cameraman.tif'));
+    
+    original = load_image(getappdata(0, 'DIP_image_path'));
+    if min(size(original)) < 128
+        fprintf('  [warning] Image is smaller than 128x128; some blurs may exceed image bounds.\n');
+    end
+
     [blurred, PSF] = generate_blur(original, 30, 45);
     iterations = [1, 5, 10, 15, 20, 25, 30, 40, 50];
     psnr_custom  = zeros(1, 9); psnr_builtin = zeros(1, 9);

@@ -30,9 +30,15 @@ function ai_comparison()
     methods = {'Blurred', 'Wiener (Custom)', 'Lucy (Custom)', 'AI/Bilateral'};
     images = {blurred, restored_wiener, restored_lucy, restored_ai};
     
+    % Preallocate metrics
+    PSNR_vals = zeros(length(methods), 1);
+    SSIM_vals = zeros(length(methods), 1);
+    
     for i = 1:length(methods)
+        PSNR_vals(i) = psnr(images{i}, original);
+        SSIM_vals(i) = ssim(images{i}, original);
         fprintf('%-20s %-10.2f %-10.4f\n', methods{i}, ...
-            psnr(images{i}, original), ssim(images{i}, original));
+            PSNR_vals(i), SSIM_vals(i));
     end
     
     % --- ADDED: Save result image to results/figures/ ---
@@ -50,4 +56,25 @@ function ai_comparison()
     close(fig);
     
     fprintf('\nResult image saved to results/figures/ai_comparison.png\n');
+    
+    % --- ADDED: Save metrics to results/metrics/ ---
+    if ~exist('results/metrics', 'dir')
+        mkdir('results/metrics');
+    end
+    
+    ai_results = table( ...
+        methods', ...
+        PSNR_vals, ...
+        SSIM_vals, ...
+        'VariableNames', {'Method', 'PSNR_dB', 'SSIM'});
+    
+    % Save CSV
+    writetable(ai_results, 'results/metrics/ai_comparison_results.csv');
+    fprintf('Metrics CSV saved: results/metrics/ai_comparison_results.csv\n');
+    
+    % Save MAT
+    save('results/metrics/ai_comparison_results.mat', ...
+        'ai_results', 'methods', 'PSNR_vals', 'SSIM_vals', ...
+        'len', 'theta', 'noise_sigma', 'ai_available');
+    fprintf('Metrics MAT saved: results/metrics/ai_comparison_results.mat\n');
 end

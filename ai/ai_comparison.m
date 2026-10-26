@@ -34,4 +34,20 @@ function ai_comparison()
         fprintf('%-20s %-10.2f %-10.4f\n', methods{i}, ...
             psnr(images{i}, original), ssim(images{i}, original));
     end
+    
+    % --- ADDED: Save result image to results/figures/ ---
+    fig = figure('Visible', 'off');
+    montage(images, 'Size', [1 4]);
+    title('Blurred | Wiener (Custom) | Lucy (Custom) | AI/Bilateral');
+    
+    % Ensure folder exists
+    if ~exist('results/figures', 'dir')
+        mkdir('results/figures');
+    end
+    
+    % Save as PNG
+    exportgraphics(fig, 'results/figures/ai_comparison.png', 'Resolution', 300);
+    close(fig);
+    
+    fprintf('\nResult image saved to results/figures/ai_comparison.png\n');
 end

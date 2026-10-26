@@ -213,10 +213,10 @@ Adds a smoothness prior `P` (Laplacian) to prevent noise amplification. Best qua
 
 1. **Regularized filtering wins** under ideal conditions (31.78 dB, SSIM 0.903).
 2. **Wiener collapses** under even minimal noise (σ = 0.001 → 9.6 dB drop).
-3. **PSF errors are catastrophic** — a 5-pixel error causes a 7.3 dB drop.
+3. **PSF errors are catastrophic** — a 5-pixel error causes a 7.4 dB drop.
 4. **FFT conventions matter** — a wrong PSF shift reduces Wiener from 22.79 dB to 13.04 dB.
-5. **Custom implementations can match built-ins** within 2 dB after correct FFT handling.
-6. **Iterative methods improve monotonically** on noise-free images; the optimal stopping point appears only when noise is present.
+5. **Custom Lucy-Richardson matches built-in** within 2 dB; Wiener and Regularized show larger gaps (3.36 and 9.83 dB).
+6. **Lucy-Richardson** converges monotonically on noise-free images, improving from 18.91 dB at 1 iteration to 25.89 dB at 50 iterations (built-in) with no signs of degradation.
 
 ---
 

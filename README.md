@@ -38,7 +38,6 @@ The goal is not just to *run* deblurring algorithms — it's to *understand* the
 - **Quantitative metrics** — PSNR, SSIM, runtime
 - **Visual grids** — each experiment produces image grids for every parameter setting
 - **User-supplied images** — pick any image at runtime, or use the default `cameraman.tif`
-- **AI comparison** — pretrained DnCNN as a modern baseline
 - **Report-ready output** — auto-generated figures and CSV metrics
 
 ---

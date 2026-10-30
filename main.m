@@ -5,7 +5,6 @@ clc; clear; close all;
 addpath('custom');
 addpath('utils');
 addpath('experiments');
-addpath('ai');
 
 % ---- Results folders ----
 if ~exist('results/figures', 'dir'); mkdir('results/figures'); end

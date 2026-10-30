@@ -8,7 +8,6 @@
 
 [![MATLAB](https://img.shields.io/badge/MATLAB-R2020a%2B-orange?logo=mathworks)](https://www.mathworks.com/products/matlab.html)
 [![Toolbox](https://img.shields.io/badge/Image%20Processing-Toolbox-blue)](https://www.mathworks.com/products/image.html)
-[![License](https://img.shields.io/badge/License-Academic-lightgrey)](#license)
 
 </div>
 

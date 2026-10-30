@@ -4,7 +4,7 @@
 
 # Motion Deblurring
 
-### A Comparative Study of Classical, Custom, and AI-Based Image Restoration
+### A Comparative Study of Classical and Custom Image Restoration
 
 [![MATLAB](https://img.shields.io/badge/MATLAB-R2020a%2B-orange?logo=mathworks)](https://www.mathworks.com/products/matlab.html)
 [![Toolbox](https://img.shields.io/badge/Image%20Processing-Toolbox-blue)](https://www.mathworks.com/products/image.html)

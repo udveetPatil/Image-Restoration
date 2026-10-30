@@ -103,8 +103,6 @@ Image-Restoration/
 │   ├── exp4_wrong_psf.m            # PSF sensitivity heatmap
 │   ├── exp5_convergence.m          # Iteration count analysis
 │   └── exp6_custom_vs_builtin.m    # Implementation validation
-├── ai/
-│   └── ai_comparison.m             # Pretrained DnCNN denoising network
 └── results/
     ├── figures/                    # Pre-generated PNG outputs (cameraman.tif)
     └── metrics/                    # Pre-generated CSV + MAT outputs
@@ -225,7 +223,6 @@ Adds a smoothness prior `P` (Laplacian) to prevent noise amplification. Best qua
 | :--- | :--- | :--- |
 | MATLAB | R2020a or later | `exportgraphics` required |
 | Image Processing Toolbox | any | `imfilter`, `fspecial`, `imnoise`, `psnr`, `ssim` |
-| Deep Learning Toolbox | optional | Only needed for the AI comparison (DnCNN) |
 
 ---
 

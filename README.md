@@ -1,4 +1,4 @@
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)]
+![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)
 
 <div align="center">
 
